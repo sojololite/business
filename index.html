@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sojolo Business</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f0f4ff 0%, #e6ecf8 100%);
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(10, 46, 95, 0.03) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(10, 46, 95, 0.02) 0%, transparent 25%);
+      color: #2d3748;
+      line-height: 1.6;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      text-align: center;
+      padding: 50px 30px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(10, 46, 95, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(10, 46, 95, 0.05) 0%, transparent 70%);
+      z-index: 0;
+    }
+
+    .container > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 700;
+      color: #0A2E5F;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: clamp(1rem, 3.5vw, 1.1rem);
+      color: #4a5568;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #0A2E5F;
+      color: white;
+      font-size: clamp(1rem, 3.5vw, 1.2rem);
+      font-weight: 600;
+      padding: 16px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(10, 46, 95, 0.25);
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .btn-download:hover {
+      background: #08224a;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(10, 46, 95, 0.35);
+    }
+
+    .download-note {
+      font-size: 0.875rem;
+      color: #718096;
+      margin-top: 12px;
+    }
+
+    .social-buttons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-social {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 22px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      gap: 10px;
+      color: white;
+      font-size: 0.95rem;
+    }
+
+    .btn-facebook {
+      background: #1877f2;
+    }
+
+    .btn-facebook:hover {
+      background: #166fe5;
+      transform: translateY(-2px);
+    }
+
+    .btn-twitter {
+      background: #000;
+    }
+
+    .btn-twitter:hover {
+      background: #1a1a1a;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 600px) {
+      .social-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn-social {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sojolo Business</h1>
+    <p>
+      Con Sojolo Business puedes publicar múltiples anuncios de lo que necesites ofrecer a un público muy amplio, y todo de forma gratuita. Ideal para empresas, emprendedores y profesionales independientes.
+    </p>
+
+    <a href="sojolo-business.apk" class="btn-download" id="downloadBtn">
+      <i class="fas fa-download icon"></i> Descargar App
+    </a>
+    <div class="download-note">(Archivo APK seguro y verificado)</div>
+
+    <div class="social-buttons">
+      <a href="#" class="btn-social btn-facebook" id="shareFacebook">
+        <i class="fab fa-facebook-f"></i> Compartir en Facebook
+      </a>
+      <a href="#" class="btn-social btn-twitter" id="shareTwitter">
+        <i class="fab fa-x-twitter"></i> Publicar en X (Twitter)
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Función inteligente de compartir
+    function shareContent() {
+      const title = '¡Descubre Sojolo Business!';
+      const text = 'Publica tus anuncios de forma gratuita con Sojolo Business. Ideal para emprendedores y empresas. ¡Descárgalo ya!';
+      const url = window.location.href;
+
+      if (navigator.share) {
+        // Web Share API (disponible en móviles modernos)
+        navigator.share({ title, text, url })
+          .catch(console.error);
+      } else {
+        // Fallback: abrir en redes sociales con texto predefinido
+        const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+        const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+
+        document.getElementById('shareFacebook').href = facebookUrl;
+        document.getElementById('shareTwitter').href = twitterUrl;
+      }
+    }
+
+    // Asignar evento de compartir (opcional: al hacer clic en cualquier botón de compartir)
+    document.querySelectorAll('.btn-social').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        shareContent();
+      });
+    });
+
+    // Opcional: analytics o seguimiento de descarga
+    document.getElementById('downloadBtn').addEventListener('click', () => {
+      // Aquí podrías añadir un evento de seguimiento (Google Analytics, etc.)
+      console.log('Descarga iniciada');
+    });
+  </script>
+</body>
+</html>
