@@ -4,33 +4,150 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sojolo Business</title>
-  <meta name="description" content="Publica tus anuncios de forma gratuita con Sojolo Business. Ideal para emprendedores, empresas y profesionales.">
+  <meta name="description" content="Publica tus anuncios de forma gratuita con Sojolo Business. Ideal para emprendedores, empresas y profesionales. Descarga la app ahora.">
+  <meta name="keywords" content="anuncios gratis, publicidad, emprendedores, pymes, app Android">
+  <meta name="author" content="Sojolo Business">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏢</text></svg>">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yO5q2Q8J2Z6y5J0j4aZv1Jt1KzFqG7x5Z4y6K0Z6Z1dKf1cD3Q5y3y5j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j6J4a3y3j......" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <div class="logo-badge">🏢 Sojolo Business</div>
-    <h1>Publica Gratis. Alcanza Más.</h1>
-    <p>Con Sojolo Business, publica múltiples anuncios sin costo y llega a miles de usuarios. Ideal para emprendedores, pymes y profesionales autónomos.</p>
-
-    <a href="https://apk.e-droid.net/apk/app3759538-nor4ju.apk?v=6" class="btn-download" id="downloadBtn" download>
-      <i class="fas fa-cloud-download-alt"></i> Descargar APK
-    </a>
-    <div class="download-note">✅ Archivo verificado y seguro</div>
-
-    <div class="social-buttons">
-      <a href="#" class="btn-social btn-facebook" id="shareFacebook">
-        <i class="fab fa-facebook-f"></i> Compartir en Facebook
-      </a>
-      <a href="#" class="btn-social btn-twitter" id="shareTwitter">
-        <i class="fab fa-x-twitter"></i> Publicar en X
-      </a>
+  <!-- Menú inteligente -->
+  <nav class="smart-nav" id="smartNav">
+    <div class="nav-container">
+      <div class="logo-badge">🏢 Sojolo Business</div>
+      <button class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="#caracteristicas" class="nav-link">Características</a></li>
+        <li><a href="#ventajas" class="nav-link">Ventajas</a></li>
+        <li><a href="#descarga" class="nav-link">Descargar</a></li>
+        <li><a href="#compartir" class="nav-link">Compartir</a></li>
+      </ul>
     </div>
+  </nav>
+
+  <div class="container">
+    <!-- Sección Inicio -->
+    <section id="inicio" class="section">
+      <h1>Publica Gratis. Alcanza Más.</h1>
+      <p>Con Sojolo Business, publica múltiples anuncios sin costo y llega a miles de usuarios. Ideal para emprendedores, pymes y profesionales autónomos.</p>
+    </section>
+
+    <!-- Sección Características -->
+    <section id="caracteristicas" class="section">
+      <h2>¿Qué puedes hacer en Sojolo Business?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-bullhorn"></i>
+          <h3>Publicar Anuncios Ilimitados</h3>
+          <p>Crea y publica tantos anuncios como necesites completamente gratis</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Alcance Amplio</h3>
+          <p>Tus publicaciones llegarán a todos los usuarios que utilicen la plataforma</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-images"></i>
+          <h3>Multi Función</h3>
+          <p>Añadir imágenes, enlaces, comentarios, likes, conversar con clientes, editar y renovar anuncios</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>En Tiempo Real</h3>
+          <p>Verás los anuncios de artículos con fecha y hora de publicación</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-tags"></i>
+          <h3>Variedad</h3>
+          <p>Te encontrarás con diversos tipos de anuncios de otros usuarios</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Cómodo y Fácil</h3>
+          <p>Gestiona tus anuncios desde cualquier lugar con tu móvil</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Ventajas -->
+    <section id="ventajas" class="section">
+      <h2>Ventajas de la Plataforma</h2>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Registro gratuito</span>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Sin límites</span>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Rápido</span>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Soporte técnico</span>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Actualizado</span>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Comunidad activa</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Descarga -->
+    <section id="descarga" class="section">
+      <a href="https://apk.e-droid.net/apk/app3759538-nor4ju.apk?v=6" class="btn-download" id="downloadBtn" download>
+        <i class="fas fa-cloud-download-alt"></i> Descargar APK
+      </a>
+      <div class="download-note">✅ Archivo verificado y seguro</div>
+    </section>
+
+    <!-- Sección Compartir -->
+    <section id="compartir" class="section">
+      <h2>¡Comparte la oportunidad!</h2>
+      <p class="motivational-text">Ayuda a otros emprendedores a descubrir Sojolo Business. Juntos podemos crecer.</p>
+      <div class="social-grid">
+        <button class="social-btn whatsapp" data-platform="whatsapp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </button>
+        <button class="social-btn telegram" data-platform="telegram">
+          <i class="fab fa-telegram"></i> Telegram
+        </button>
+        <button class="social-btn facebook" data-platform="facebook">
+          <i class="fab fa-facebook"></i> Facebook
+        </button>
+        <button class="social-btn messenger" data-platform="messenger">
+          <i class="fab fa-facebook-messenger"></i> Messenger
+        </button>
+        <button class="social-btn twitter" data-platform="twitter">
+          <i class="fab fa-x-twitter"></i> Twitter
+        </button>
+        <button class="social-btn instagram" data-platform="instagram">
+          <i class="fab fa-instagram"></i> Instagram
+        </button>
+        <button class="social-btn sms" data-platform="sms">
+          <i class="fas fa-sms"></i> SMS
+        </button>
+        <button class="social-btn copy" data-platform="copy">
+          <i class="fas fa-link"></i> Copiar Enlace
+        </button>
+      </div>
+    </section>
   </div>
 
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
