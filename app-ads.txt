@@ -1,0 +1,9 @@
+# app-ads.txt para CELL App
+# Propietario: sojololite
+# Sitio web: https://sojololite.github.io/cell/
+
+# Google AdMob
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+# Otros networks de publicidad pueden ser añadidos aquí
+# example.com, 12345, DIRECT, 67890
